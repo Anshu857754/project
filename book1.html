@@ -98,6 +98,12 @@
                 width: 100%;
                  margin-left: 0;
             }
+            header {
+                position: fixed; 
+                top: 0;
+                left: 0;
+                width: 100%;
+            }
         }
         header {
             width: 100%;
@@ -109,7 +115,9 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            position: relative; 
+            position: fixed; 
+            top: 0;
+            left: 0;
             z-index: 1000;
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 1);
             font-weight: bold;
@@ -245,10 +253,10 @@
         }
     </style>
 </head>
-<body class="container-fluid mt-3">
+<body class="container-fluid mt-3" style="padding-top: 70px;">
     <header style="border-radius: 20px;">
         <img src="pwlogo.jpg" alt="Logo">
-        <h1 class="Welcome-heading">Welcome to PW Book Showcase</h1>
+        <h1 class="Welcome-heading">Physics Med Easy</h1>
         <a href="index.html" class="home-link bi bi-house"> Home</a>
     </header>
     <main>
