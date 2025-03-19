@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap Icons -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="bootstrap-icons.css">
+    <link rel="stylesheet" href="bootstrap.css"> 
+    <title>FirstBook1</title>
+    <link rel="stylesheet" href="">
+    <style type="text/css">
+        .container-fluid {
+             background: linear-gradient(90deg, rgba(255, 204, 204, 1), rgba(255, 179, 179, 1), rgba(255, 204, 255, 1), rgba(204, 204, 255, 1), rgba(204, 255, 255, 1), rgba(204, 255, 204, 1), rgba(255, 255, 204, 1), rgba(255, 204, 153, 1));
+             background-size: 400% 400%;
+             animation: rainbow 10s ease infinite;
+        }
+        @keyframes brown {
+             0% {
+                 background-position: 0% 50%;
+            }
+             25% {
+                 background-position: 25% 100%;
+            }
+             50% {
+                 background-position: 50% 70%;
+            }
+             100% {
+                 background-position: 0% 100%;
+            }
+        }
+        summary~p::before {
+              content: ".";
+             color: white;
+             font-size: 30px;
+        }
+        p, li {
+             color: white;
+         }
+        .container {
+              border: 20px groove black;
+             background-color: black;
+             color: white;
+             width: 400px;
+        }
+        .Target {
+             margin-top: 20px;
+             width: 100%;
+        }
+        div summary {
+            border-radius: 10px;
+            background-color: black;
+             padding: 3px;
+            color: white;
+        }
+        a {
+             text-decoration: none;
+        }
+        .feedback-form {
+            margin-top: 30px;
+            width: 50%;
+            display: flex;
+            flex-direction: column;
+            color: black;
+            padding: 20px;
+            margin-left: auto;
+            margin-right: auto;
+            justify-content: center;
+            align-items: center;
+            max-width: 800px; 
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+        }
+         .feedback-form textarea {
+              width: 100%;
+            resize: vertical; 
+        }
+         @media screen and (orientation:portrait) {
+             .container {
+                 width: 100%;
+                 border: 10px groove black;
+                     margin-left: auto;
+                 margin-right: auto;
+            }
+             .feedback-form {
+                 width: 100%;
+                  margin-left: auto;
+                 margin-right: auto;
+            }
+             .book-image img {
+                  width: 100%; 
+                 height: auto; 
+            }
+            .book-details-container {
+                 flex-direction: column;  
+                              align-items: center;
+            }
+            .book-info {
+                width: 100%; 
+                margin-left: 0; 
+            }
+        }
+        header {
+            width: 100%;
+            padding: 2px;
+              border-radius: 20px;
+            text-align: center;
+             background-color: black;
+            color: white;
+             display: flex;
+              align-items: center;
+             justify-content: center;
+            position: relative; 
+              z-index: 1000;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 1);
+            font-weight: bold;
+            font-size: 2rem; 
+        }
+        footer {
+            border-radius: 20px;
+              text-align: center;
+            padding: 10px;
+             background-color: #100f0196;
+            color: white;
+             width: 100%;
+            position: relative;
+             z-index: 1000;
+        }
+        body {
+            font-family: Arial, sans-serif;
+               margin: 0;
+            padding: 0;
+             background: linear-gradient(90deg, rgba(255, 204, 204, 1), rgba(255, 179, 179, 1), rgba(255, 204, 255, 1), rgba(204, 204, 255, 1), rgba(204, 255, 255, 1), rgba(204, 255, 204, 1), rgba(255, 255, 204, 1), rgba(255, 204, 153, 1));
+            background-size: 400% 400%;
+             animation: rainbow 10s ease infinite;
+            color: rgba(51, 51, 51, 1);
+            display: flex;
+             flex-direction: column;
+            min-height: 100vh;
+             padding-top: 70px; 
+            padding-bottom: 70px;
+        }
+        header img {
+             width: 50px;
+            height: 50px;
+             position: absolute;
+            left: 10px;
+             top: 50%;
+            transform: translateY(-50%);
+        }
+        header .home-link {
+            position: absolute;
+             right: 10px;
+             top: 50%;
+            transform: translateY(-50%);
+             color: white;
+            text-decoration: none;
+            font-size: 1rem; 
+             font-weight: bold;
+        }
+        .logo-text {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+        .book-details-card {
+             background-color: #f0f8ff;
+            border-radius: 8px;
+             padding: 20px;
+            margin: 20px;
+             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .book-details-container {
+            display: flex;
+             flex-direction: row;
+             align-items: flex-start;
+        }
+        .book-image {
+            flex: 1;
+            text-align: center;
+        }
+         /*book-images*/
+        .book-image img {
+             width: 90%; 
+             height: auto;
+        }
+         /*book- info*/
+        .book-info {
+            flex: 1;
+             padding: 20px;
+            background-color: #f0f8ff;
+             border-radius: 8px;
+             margin-left: 20px;
+            height: auto;
+             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+             width: 100%; 
+            text-align: center;
+        }
+         /*book- features*/
+        .book-features ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        /*book- features*/
+        .book-features ul li {
+            margin-bottom: 10px;
+            color: black;
+        }
+        /*discount coupon*/
+        .discount-coupon {
+            background-color: #ffebcd;
+             border-radius: 2px;
+            padding: 10px;
+             color: black;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+             width: 100%; 
+            height: auto; 
+        }
+        .faq-section {
+             margin-top: 20px;
+            max-width: 800px; 
+             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            background-color: #ffebcd;
+        }
+        .faq {
+             margin-bottom: 10px;
+        } 
+        .faq-question {
+             cursor: pointer;
+            font-weight: bold;
+             background-color: #ffebcd;
+            color: black;
+        }
+        .faq-answer {
+             margin-left: 20px;
+             background-color: #ffebcd;
+        }
+        .physics{
+             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); 
+        }
+        .faq{
+             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); 
+             font: bold;
+        }
+        .feedback{
+             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); 
+             font: bold;
+        }
+        .Welcome-heading{
+             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+             font: bold;
+        }
+    </style>
+</head>
+<body class="container-fluid mt-3">
+    <header style="border-radius: 20px;">
+        <img src="pwlogo.jpg" alt="Logo">
+        <h1 class="Welcome-heading">Welcome to PW Book Showcase</h1>
+        <a href="index.html" class="home-link bi bi-house"> Home</a>
+    </header>
+    <main>
+        <div class="book-details-card">
+            <div class="book-details-container d-flex">
+                <div class="book-image text-center fixed-image">
+                    <img src="pw-botny.png" >
+                </div>
+                <div class="book-info ms-3 p-3">
+                    <h2 style="font-family: Caveat; color: black;" class="physics"><b>Botony Med easy</b></h2>
+                    <div class="book-features mt-3 ">
+                        <h3>Product Details</h3>
+                        <ul>
+                            <li>Author: <b>Dr. Vipin Sharma</b></li>
+                            <li>Publisher: PW Publications</li>
+                            <li>ISBN: 123-456-789</li>
+                            <li>Pages: 500</li>
+                            <li>Language: English</li>
+                            <li>Edition: 2nd</li>
+                        </ul>
+                    </div>
+                    <div class="book-price mt-3">
+                        <h3 style="color: red;">Price: &#8377 <strike style="color: gray;">799</strike> 525</h3>
+                    </div>
+                    <div class="discount-coupon mt-3 p-2 ">
+                        <h3><b>Discount Coupon</b></h3>
+                        <p style="color: black;">Use code <b>PW10</b> to get 10% off!</p>
+                    </div>
+                </div>
+            </div>
+            <div class="faq-section mt-5">
+                <h4 class="faq">FAQ's</h4>
+                <details class="faq">
+                    <summary class="faq-question">Shipping Policy</summary>
+                    <div class="faq-answer">• To check the status of your order, refer "My Orders" section.</div>
+                    <div class="faq-answer">• For detailed information click here: <a href="https://docs.google.com/document/d/e/2PACX-1vTRWne87SLCsYB3A6eiuFXrcgqXmeeWjwrW_tTm5SGcixJ4k5HGHdNzWdoBC1vhMkjmC3bw0BvQULUW/pub#h.1eo4v9x9zvw"> Shipping Policy.</a></div>
+                </details>
+                <details class="faq">
+                    <summary class="faq-question">Cancellation Policy</summary>
+                    <div class="faq-answer">• To cancel the order go to "My orders" section.</div>
+                    <div class="faq-answer">• For detailed information click here: <a href="https://docs.google.com/document/d/e/2PACX-1vTRWne87SLCsYB3A6eiuFXrcgqXmeeWjwrW_tTm5SGcixJ4k5HGHdNzWdoBC1vhMkjmC3bw0BvQULUW/pub#h.vfacyekal5hu"> Cancellation Policy</a></div>
+                </details>
+                <details class="faq">
+                    <summary class="faq-question">Return & Refund Policy</summary>
+                    <div class="faq-answer">• We have a Return & Refund policy, The policy is eligible only till 7 days after delivery date.</div>
+                    <div class="faq-answer">• For detailed information click here: <a href="https://docs.google.com/document/d/e/2PACX-1vTRWne87SLCsYB3A6eiuFXrcgqXmeeWjwrW_tTm5SGcixJ4k5HGHdNzWdoBC1vhMkjmC3bw0BvQULUW/pub#h.qpp3iysu9jxu"> Return & Refund Policy</a></div>
+                </details>
+                <details class="faq">
+                    <summary class="faq-question">Return & Replacement Policy</summary>
+                    <div class="faq-answer">• We have a Return & Replacement policy, The policy is eligible only till 7 days after delivery date</div>
+                    <div class="faq-answer">• For detailed information click here: <a href="https://docs.google.com/document/d/e/2PACX-1vTRWne87SLCsYB3A6eiuFXrcgqXmeeWjwrW_tTm5SGcixJ4k5HGHdNzWdoBC1vhMkjmC3bw0BvQULUW/pub#h.ma2wwz9f6d9o"> Return & Replacement policy</a></div>
+                </details>
+                <details class="faq">
+                    <summary class="faq-question">Purchase link</summary>
+                    <div class="faq-answer">• You can purchase from here: <a href="https://store.pw.live/products/botany-med-easy-hand-written-notes"> Pw store</a></div>
+                    <div class="faq-answer">• You can also purchase from here: <a href="https://www.amazon.in/Botany-Handwritten-Mindmaps-Mnemonics-Syllabus/dp/9360345652"> amazon</a></div>
+                </details>
+            </div>
+            <h4 class="feedback">Feedback Form</h4>
+            <div class="feedback-form d-flex justify-content-center">
+                <form>
+                    <div class="mb-3">
+                        <label for="name" class="form-label"><b>Name:</b></label>
+                        <input type="text" class="form-control" id="name" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="email" class="form-label"><b>Email:</b></label>
+                        <input type="email" class="form-control" id="email" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="feedback" class="form-label"><b>Feedback:</b></label>
+                        <textarea class="form-control" id="feedback" rows="3" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Submit feedback</button>
+                </form>
+            </div>
+        </div>
+    </main>
+    <footer style="margin-top: 20px">
+        <span class="bi bi-c-circle"></span> 2025 BookShow. All Rights Reserved.
+    </footer>
+</body>
+</html>
