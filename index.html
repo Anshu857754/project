@@ -40,7 +40,9 @@ header {
     display: flex;
     align-items: center;
     justify-content: center;
-    position: relative; 
+    position: fixed; 
+    top: 0;
+    left: 0;
     z-index: 1000;
 }
 
@@ -197,6 +199,10 @@ img{
         background-color: #a0960896;
                   color: rgba(43, 11, 11, 0.947);
         border-radius: 20px;
+        position: fixed; 
+        top: 0;
+        left: 0;
+        width: 100%;
     }
     /* Explore Books Section */
     marquee{
@@ -230,7 +236,7 @@ img{
     </style>
    
 </head>
-<body class="container-fluid">
+<body class="container-fluid" style="padding-top: 70px;">
     <!-- Header Section -->
     <header style="border-radius: 20px;">
         <img src="pwlogo.jpg" alt="Logo">
